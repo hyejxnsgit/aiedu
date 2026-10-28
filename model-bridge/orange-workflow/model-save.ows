@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="AI EDU 모델 저장" description="File(train.tab) → Tree → Python Script(model.json 저장)">
+	<nodes>
+		<node id="0" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File" position="(110.0, 201.0)" />
+		<node id="1" name="Tree" qualified_name="Orange.widgets.model.owtree.OWTreeLearner" project_name="Orange3" version="" title="Tree" position="(260.0, 201.0)" />
+		<node id="2" name="Tree Viewer" qualified_name="Orange.widgets.visualize.owtreeviewer.OWTreeGraph" project_name="Orange3" version="" title="Tree Viewer" position="(307.0, 88.0)" />
+		<node id="3" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(422.0, 208.0)" />
+		<node id="4" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File (1)" position="(266.0, 304.0)" />
+		<node id="5" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="모델 저장 (Python Script)" position="(422.0, 330.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="1" sink_node_id="2" source_channel="Model" sink_channel="Tree" enabled="true" source_channel_id="model" sink_channel_id="tree" />
+		<link id="2" source_node_id="4" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="train_data" />
+		<link id="3" source_node_id="1" sink_node_id="3" source_channel="Learner" sink_channel="Learner" enabled="true" source_channel_id="learner" sink_channel_id="learner" />
+		<link id="4" source_node_id="1" sink_node_id="5" source_channel="Model" sink_channel="Classifier" enabled="true" source_channel_id="model" sink_channel_id="classifier" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="pickle">gASVEQQAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwpL1VzZXJzL2Nob2loeWVqaW4vRG93bmxvYWRzL3RyYWluICgxKS50YWKUjAZwcmVmaXiU
+TowHcmVscGF0aJROjAV0aXRsZZSMDXRyYWluICgxKS50YWKUjAVzaGVldJSMAJSMC2ZpbGVfZm9y
+bWF0lE51YmgGKYGUfZQoaAmMPy9Vc2Vycy9jaG9paHllamluL0FJLUVEVS9tb2RlbC1icmlkZ2Uv
+b3JhbmdlLXdvcmtmbG93L3RyYWluLnRhYpRoC4wHYmFzZWRpcpRoDIwJdHJhaW4udGFilGgNjAl0
+cmFpbi50YWKUaA9oEGgRTnViZYwLcmVjZW50X3VybHOUXZSME3NhdmVkV2lkZ2V0R2VvbWV0cnmU
+TowLc2hlZXRfbmFtZXOUfZSMBnNvdXJjZZRLAIwDdXJslGgQjA1kb21haW5fZWRpdG9ylH2UjAtf
+X3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdz
+lIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwJdmFyaWFibGVzlF2UaB99lGgrXZQoXZQo
+jA1lZ29fc3BlZWRfa21olIwUT3JhbmdlLmRhdGEudmFyaWFibGWUjBJDb250aW51b3VzVmFyaWFi
+bGWUk5RLAGgQiGVdlCiMBWdhcF9tlGgzSwBoEIhlXZQojA5sZWFkX3NwZWVkX2ttaJRoM0sAaBCI
+ZV2UKIwEcm9hZJRoMYwQRGlzY3JldGVWYXJpYWJsZZSTlEsAjAhkcnksIHdldJSJZV2UKIwQYWN0
+dWFsX2RlbHRhX2ttaJRoM0sBaBCIZV2UKIwGcnVuX2lklGgxjA5TdHJpbmdWYXJpYWJsZZSTlEsC
+aBCJZV2UKIwDdF9zlGgzSwJoEIhlXZQojAZzb3VyY2WUaEJLAmgQiWVlc2ghSwF1jAphdHRyaWJ1
+dGVzlCiMDWVnb19zcGVlZF9rbWiUSwKGlIwFZ2FwX22USwKGlIwObGVhZF9zcGVlZF9rbWiUSwKG
+lIwEcm9hZJRdlCiMA2RyeZSMA3dldJRlhpR0lIwFbWV0YXOUjAZydW5faWSUSwOGlIwDdF9zlEsC
+hpSMBnNvdXJjZZRLA4aUh5SMCmNsYXNzX3ZhcnOUjBBhY3R1YWxfZGVsdGFfa21olEsChpSFlIwS
+bW9kaWZpZWRfdmFyaWFibGVzlF2UdWJhdS4=
+</properties>
+		<properties node_id="1" format="literal">{'auto_apply': True, 'binary_trees': True, 'controlAreaVisible': True, 'learner_name': '', 'limit_depth': True, 'limit_majority': True, 'limit_min_internal': True, 'limit_min_leaf': True, 'max_depth': 100, 'min_internal': 5, 'min_leaf': 2, 'savedWidgetGeometry': None, 'sufficient_majority': 95, '__version__': 1}</properties>
+		<properties node_id="2" format="pickle">gASVxhQAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSJjBFsaW5lX3dpZHRoX21ldGhvZJRL
+AowObWF4X25vZGVfd2lkdGiUS5aMDm1heF90cmVlX2RlcHRolEsAjBFyZWdyZXNzaW9uX2NvbG9y
+c5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsAAwAAAAAABQAAALQAAAW9AAADigAAAAUA
+AADQAAAFvQAAA4oAAAAAAAAAAAW+AAAABQAAANAAAAW9AAADipSMEXNob3dfaW50ZXJtZWRpYXRl
+lImMBHpvb22USwWMC19fdmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UKIwVb3Jhbmdl
+d2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwQbm9kZV9sYWJl
+bHNfaGludJSMAJSMEnRhcmdldF9jbGFzc19pbmRleJRLAGgKSwF1jAdjbGFzc2VzlIwST3Jhbmdl
+LmRhdGEuZG9tYWlulIwGRG9tYWlulJOUKYGUfZQojAphdHRyaWJ1dGVzlCiMFE9yYW5nZS5kYXRh
+LnZhcmlhYmxllIwNbWFrZV92YXJpYWJsZZSTlGgejBJDb250aW51b3VzVmFyaWFibGWUk5ROjA1l
+Z29fc3BlZWRfa21olIeUUpR9lCiMBV9uYW1llGgjjA5fY29tcHV0ZV92YWx1ZZROjAt1bmtub3du
+X3N0cpSPlChoFYwBfpROjANuYW6UjAEulEd/+AAAAAAAAIwCTkGUjAE/lJCMD3NvdXJjZV92YXJp
+YWJsZZROjAZzcGFyc2WUiWgdfZSMD19tYXhfcm91bmRfZGlmZpRHO145IBAXXuaME19udW1iZXJf
+b2ZfZGVjaW1hbHOUSxCMD2FkanVzdF9kZWNpbWFsc5RLAYwLX2Zvcm1hdF9zdHKUjAIlZ5R1Ymgg
+aCJOjAVnYXBfbZSHlFKUfZQoaCdoOGgoTmgpaCpoME5oMYloHX2UaDNHO5LjtAoOm09oNEsPaDVL
+AWg2aDd1YmggaCJOjA5sZWFkX3NwZWVkX2ttaJSHlFKUfZQoaCdoPWgoTmgpaCpoME5oMYloHX2U
+aDNHO5LjtAoOm09oNEsPaDVLAWg2aDd1YmggKGgejBBEaXNjcmV0ZVZhcmlhYmxllJOUTowEcm9h
+ZJSMA2RyeZSMA3dldJSGlHSUUpR9lChoJ2hEaChOaCloKmgwTmgxiWgdfZSMDF92YWx1ZV9pbmRl
+eJR9lChoRUsAaEZLAXV1YnSUjApjbGFzc192YXJzlGggaCJOjBBhY3R1YWxfZGVsdGFfa21olIeU
+UpR9lChoJ2hQaChOaCloKmgwTmgxiWgdfZRoM0c7XjkgEBde5mg0SxBoNUsBaDZoN4wIX3BhbGV0
+dGWUjCJPcmFuZ2Uud2lkZ2V0cy51dGlscy5jb2xvcnBhbGV0dGVzlIwRQ29udGludW91c1BhbGV0
+dGWUk5QpgZR9lCiMBG5hbWWUjBVsaW5lYXJfYmd5d18yMF85OF9jNjaUjA1mcmllbmRseV9uYW1l
+lIwRQmx1ZS1HcmVlbi1ZZWxsb3eUjAhjYXRlZ29yeZSMBkxpbmVhcpSMB3BhbGV0dGWUjBZudW1w
+eS5fY29yZS5tdWx0aWFycmF5lIwMX3JlY29uc3RydWN0lJOUjAVudW1weZSMB25kYXJyYXmUk5RL
+AIWUQwFilIeUUpQoSwFNAAFLA4aUaGWMBWR0eXBllJOUjAJ1MZSJiIeUUpQoSwOMAXyUTk5OSv//
+//9K/////0sAdJRiiUIAAwAABQCsBgKsBgWsBwitBwutCA6tCBCuCBKuCRSuCRavChivChqvChyw
+Cx2wCx+wCyCxDCKxDCOxDCWxDCayDSiyDSmyDSqyDSyzDS2zDS6zDTCzDjG0DjK0DjO0DjW0Dja0
+Dje0Dji0Djq1Dju1Djy1Dj21Dj61DkC1DUG1DUK1DUO1DUS1DUa1DUe1DUi1DEm1DEq1DEy0DE20
+C060C0+0C1C0ClGzClOzClSzCVWyCVayCFexCFmxCFqwB1uvB1yuBl6uBl+tBmCsBmGqBmOpB2So
+CGWnCmalDGekDWijD2qhEWugE2yeFG2cFm6bGG+ZGXGYG3KWHXOUHnSSH3WRIXaPIneNI3iLJHmJ
+JXqHJnyFJ32DKH6BKX9/KoB9K4F7LIJ5LIN3LYR1LoVyLoZwLoduL4lsL4ppMItnMIxkMI1iMI5g
+MI9dMZBbMZFZMZJWMpNUMpRSM5VQNJZONJdMNZhKNplIN5pHOJtFOZxDOp1BO51APJ4+PZ88PqA7
+QKE5QaI3QqM2RKQ0RaQzR6UxSKYwSqcuTKgtTagsT6kqUaopUqsnVKwmVqwkWK0jWa4iW68gXa8f
+X7AeYbEcY7IbZbIaZ7MYabQXa7QWbbUUb7YTcbYSc7cQdbgPd7gOebkMe7oLfboKf7sIgrwHhLwG
+hr0GiL4Fir4EjL8Ej78DkcADk8ADlcECmMICmsICnMMCnsMCoMQDosQDpcUDp8YDqcYDq8cErccE
+r8gEscgFs8kFtcoGt8oGucsHu8sIvcwJv8wKwc0Lws4MxM4Nxs8OyM8PytAQzNERzdESz9IT0dIU
+09MV1NQX1tQY2NUZ2dYa29Yc3dcd3tce4Ngg4dkh49oi5Nok5tsl59wn6dwo6t0q694s7N8t7t8v
+7+Ax8OEz8eI08uM28+M48+Q79OU99eY/9edC9uhF9ulI9+pL+OtP+OxT+e1Y+u1d+u5i++9n/PBt
+/PFz/fF5/fKA/vOH/vOO//SW//Wf//Wo//ax//e7//fG/vjS/fje+/nr+fn5lHSUYowJbmFuX2Nv
+bG9ylEuAS4BLgIeUjAVmbGFnc5RoVowNUGFsZXR0ZS5GbGFnc5STlEsAhZRSlHVidWKFlIwGX21l
+dGFzlGggaB6MDlN0cmluZ1ZhcmlhYmxllJOUTowGcnVuX2lklIeUUpR9lChoJ2iBaChOaCloKmgw
+TmgxiWgdfZR1YmggaCJOjAN0X3OUh5RSlH2UKGgnaIZoKE5oKWgqaDBOaDGJaB19lGgzRz6wxveg
+te2NaDRLAGg1SwFoNowEJS4wZpR1YmggaIBOjAZzb3VyY2WUh5RSlH2UKGgnaIxoKE5oKWgqaDBO
+aDGJaB19lHVih5SMCWNsYXNzX3ZhcpRoUowJYW5vbnltb3VzlIl1YnViaA8pgZR9lChoEn2UKGgU
+aBVoFksAaApLAXVoF2gaKYGUfZQoaB0oaCBoIk6MDWVnb19zcGVlZF9rbWiUh5RSlH2UKGgnaJlo
+KE5oKY+UKGgVaCtOaCxoLUd/+AAAAAAAAGguaC+QaDBOaDGJaB19lGgzRzteOSAQF17maDRLEGg1
+SwFoNmg3dWJoIGgiTowFZ2FwX22Uh5RSlH2UKGgnaJ9oKE5oKWidaDBOaDGJaB19lGgzRzuS47QK
+DptPaDRLD2g1SwFoNmg3dWJoIGgiTowObGVhZF9zcGVlZF9rbWiUh5RSlH2UKGgnaKRoKE5oKWid
+aDBOaDGJaB19lGgzRzuS47QKDptPaDRLD2g1SwFoNmg3dWJoIChoQ06MBHJvYWSUjANkcnmUjAN3
+ZXSUhpR0lFKUfZQoaCdoqWgoTmgpaJ1oME5oMYloHX2UaEx9lChoqksAaKtLAXV1YnSUaE9oIGgi
+TowQYWN0dWFsX2RlbHRhX2ttaJSHlFKUfZQoaCdos2goTmgpaJ1oME5oMYloHX2UaDNHO145IBAX
+XuZoNEsQaDVLAWg2aDdoVWhYKYGUfZQoaFtoXGhdaF5oX2hgaGFoZGhnSwCFlGhph5RSlChLAU0A
+AUsDhpRocYlCAAMAAAUArAYCrAYFrAcIrQcLrQgOrQgQrggSrgkUrgkWrwoYrwoarwocsAsdsAsf
+sAsgsQwisQwjsQwlsQwmsg0osg0psg0qsg0ssw0tsw0usw0wsw4xtA4ytA4ztA41tA42tA43tA44
+tA46tQ47tQ48tQ49tQ4+tQ5AtQ1BtQ1CtQ1DtQ1EtQ1GtQ1HtQ1ItQxJtQxKtQxMtAxNtAtOtAtP
+tAtQtApRswpTswpUswlVsglWsghXsQhZsQhasAdbrwdcrgZergZfrQZgrAZhqgZjqQdkqAhlpwpm
+pQxnpA1oow9qoRFroBNsnhRtnBZumxhvmRlxmBtylh1zlB50kh91kSF2jyJ3jSN4iyR5iSV6hyZ8
+hSd9gyh+gSl/fyqAfSuBeyyCeSyDdy2EdS6Fci6GcC6Hbi+JbC+KaTCLZzCMZDCNYjCOYDCPXTGQ
+WzGRWTGSVjKTVDKUUjOVUDSWTjSXTDWYSjaZSDeaRzibRTmcQzqdQTudQDyePj2fPD6gO0ChOUGi
+N0KjNkSkNEWkM0elMUimMEqnLkyoLU2oLE+pKlGqKVKrJ1SsJlasJFitI1muIluvIF2vH1+wHmGx
+HGOyG2WyGmezGGm0F2u0Fm21FG+2E3G2EnO3EHW4D3e4Dnm5DHu6C326Cn+7CIK8B4S8Boa9Boi+
+BYq+BIy/BI+/A5HAA5PAA5XBApjCAprCApzDAp7DAqDEA6LEA6XFA6fGA6nGA6vHBK3HBK/IBLHI
+BbPJBbXKBrfKBrnLB7vLCL3MCb/MCsHNC8LODMTODcbPDsjPD8rQEMzREc3REs/SE9HSFNPTFdTU
+F9bUGNjVGdnWGtvWHN3XHd7XHuDYIOHZIePaIuTaJObbJefcJ+ncKOrdKuveLOzfLe7fL+/gMfDh
+M/HiNPLjNvPjOPPkO/TlPfXmP/XnQvboRfbpSPfqS/jrT/jsU/ntWPrtXfruYvvvZ/zwbfzxc/3x
+ef3ygP7zh/7zjv/0lv/1n//1qP/2sf/3u//3xv740v343vv56/n5+ZR0lGJodmh3aHhofHVidWKF
+lGh+aCBogE6MBnJ1bl9pZJSHlFKUfZQoaCdowWgoTmgpaJ1oME5oMYloHX2UdWJoIGgiTowDdF9z
+lIeUUpR9lChoJ2jGaChOaClonWgwTmgxiWgdfZRoM0c+sMb3oLXtjWg0SwBoNUsBaDaMBCUuMGaU
+dWJoIGiATowGc291cmNllIeUUpR9lChoJ2jMaChOaClonWgwTmgxiWgdfZR1YoeUaJJotWiTiXVi
+dWJoDymBlH2UKGgSfZQoaBRoFWgWSwBoCksBdWgXaBopgZR9lChoHShoIGgiTowNZWdvX3NwZWVk
+X2ttaJSHlFKUfZQoaCdo12goTmgpj5QoaBVoK05oLGgtR3/4AAAAAAAAaC5oL5BoME5oMYloHX2U
+aDNHO145IBAXXuZoNEsQaDVLAWg2aDd1YmggaCJOjAVnYXBfbZSHlFKUfZQoaCdo3WgoTmgpaNto
+ME5oMYloHX2UaDNHO5LjtAoOm09oNEsPaDVLAWg2aDd1YmggaCJOjA5sZWFkX3NwZWVkX2ttaJSH
+lFKUfZQoaCdo4mgoTmgpaNtoME5oMYloHX2UaDNHO5LjtAoOm09oNEsPaDVLAWg2aDd1YmggKGhD
+TowEcm9hZJSMA2RyeZSMA3dldJSGlHSUUpR9lChoJ2jnaChOaClo22gwTmgxiWgdfZRoTH2UKGjo
+SwBo6UsBdXVidJRoT2ggaCJOjBBhY3R1YWxfZGVsdGFfa21olIeUUpR9lChoJ2jxaChOaClo22gw
+TmgxiWgdfZRoM0c7XjkgEBde5mg0SxBoNUsBaDZoN2hVaFgpgZR9lChoW2hcaF1oXmhfaGBoYWhk
+aGdLAIWUaGmHlFKUKEsBTQABSwOGlGhxiUIAAwAABQCsBgKsBgWsBwitBwutCA6tCBCuCBKuCRSu
+CRavChivChqvChywCx2wCx+wCyCxDCKxDCOxDCWxDCayDSiyDSmyDSqyDSyzDS2zDS6zDTCzDjG0
+DjK0DjO0DjW0Dja0Dje0Dji0Djq1Dju1Djy1Dj21Dj61DkC1DUG1DUK1DUO1DUS1DUa1DUe1DUi1
+DEm1DEq1DEy0DE20C060C0+0C1C0ClGzClOzClSzCVWyCVayCFexCFmxCFqwB1uvB1yuBl6uBl+t
+BmCsBmGqBmOpB2SoCGWnCmalDGekDWijD2qhEWugE2yeFG2cFm6bGG+ZGXGYG3KWHXOUHnSSH3WR
+IXaPIneNI3iLJHmJJXqHJnyFJ32DKH6BKX9/KoB9K4F7LIJ5LIN3LYR1LoVyLoZwLoduL4lsL4pp
+MItnMIxkMI1iMI5gMI9dMZBbMZFZMZJWMpNUMpRSM5VQNJZONJdMNZhKNplIN5pHOJtFOZxDOp1B
+O51APJ4+PZ88PqA7QKE5QaI3QqM2RKQ0RaQzR6UxSKYwSqcuTKgtTagsT6kqUaopUqsnVKwmVqwk
+WK0jWa4iW68gXa8fX7AeYbEcY7IbZbIaZ7MYabQXa7QWbbUUb7YTcbYSc7cQdbgPd7gOebkMe7oL
+fboKf7sIgrwHhLwGhr0GiL4Fir4EjL8Ej78DkcADk8ADlcECmMICmsICnMMCnsMCoMQDosQDpcUD
+p8YDqcYDq8cErccEr8gEscgFs8kFtcoGt8oGucsHu8sIvcwJv8wKwc0Lws4MxM4Nxs8OyM8PytAQ
+zNERzdESz9IT0dIU09MV1NQX1tQY2NUZ2dYa29Yc3dcd3tce4Ngg4dkh49oi5Nok5tsl59wn6dwo
+6t0q694s7N8t7t8v7+Ax8OEz8eI08uM28+M48+Q79OU99eY/9edC9uhF9ulI9+pL+OtP+OxT+e1Y
++u1d+u5i++9n/PBt/PFz/fF5/fKA/vOH/vOO//SW//Wf//Wo//ax//e7//fG/vjS/fje+/nr+fn5
+lHSUYmh2aHdoeGh8dWJ1YoWUaH5oIGiATowGcnVuX2lklIeUUpR9lChoJ2j/aChOaClo22gwTmgx
+iWgdfZR1YmggaCJOjAN0X3OUh5RSlH2UKGgnagQBAABoKE5oKWjbaDBOaDGJaB19lGgzRz6wxveg
+te2NaDRLAGg1SwFoNowEJS4wZpR1YmggaIBOjAZzb3VyY2WUh5RSlH2UKGgnagoBAABoKE5oKWjb
+aDBOaDGJaB19lHVih5RokmjzaJOJdWJ1YmV1Lg==
+</properties>
+		<properties node_id="3" format="pickle">gASVywMAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSIjAduX2ZvbGRzlEsCjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
+bmeUSwCMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLCYwTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAABTwAAALQAAARaAAACwwAAAU8AAADQAAAEWgAAAsMAAAAAAAAAAAW+AAAB
+TwAAANAAAARaAAACw5SMEnNodWZmbGVfc3RyYXRpZmllZJSIjAh1c2Vfcm9wZZSJjAtzY29yZV90
+YWJsZZR9lIwQc2hvd19zY29yZV9oaW50c5R9lCiMBk1vZGVsX5SIjAZUcmFpbl+UiYwFVGVzdF+U
+iYwCQ0GUiIwXUHJlY2lzaW9uUmVjYWxsRlN1cHBvcnSUiIwLVGFyZ2V0U2NvcmWUiIwJUHJlY2lz
+aW9ulIiMBlJlY2FsbJSIjAJGMZSIjANBVUOUiIwHTG9nTG9zc5SJjAtTcGVjaWZpY2l0eZSJjBdN
+YXR0aGV3c0NvcnJDb2VmZmljaWVudJSIjANNU0WUiIwEUk1TRZSIjANNQUWUiIwETUFQRZSIjAVT
+TUFQRZSIjAJSMpSIjAZDVlJNU0WUiYwPQ2x1c3RlcmluZ1Njb3JllIiMClNpbGhvdWV0dGWUiIwX
+QWRqdXN0ZWRNdXR1YWxJbmZvU2NvcmWUiHVzjAtfX3ZlcnNpb25fX5RLBIwQY29udGV4dF9zZXR0
+aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVz
+lH2UKIwPY2xhc3Nfc2VsZWN0aW9ulIwhKE5vbmUsIHNob3cgYXZlcmFnZSBvdmVyIGNsYXNzZXMp
+lEr/////hpSMDGZvbGRfZmVhdHVyZZROSv7///+GlIwVZm9sZF9mZWF0dXJlX3NlbGVjdGVklIlK
+/v///4aUaA19lGgoSwR1jAphdHRyaWJ1dGVzlCiMDWVnb19zcGVlZF9rbWiUSwKGlIwFZ2FwX22U
+SwKGlIwObGVhZF9zcGVlZF9rbWiUSwKGlIwEcm9hZJRLAYaUdJSMBW1ldGFzlIwGcnVuX2lklEsD
+hpSMA3Rfc5RLAoaUjAZzb3VyY2WUSwOGlIeUjApjbGFzc192YXJzlIwQYWN0dWFsX2RlbHRhX2tt
+aJRLAoaUhZR1YmF1Lg==
+</properties>
+		<properties node_id="4" format="pickle">gASVcgQAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwuL1VzZXJzL2Nob2loeWVqaW4vRG93bmxvYWRzL3ZhbGlkYXRpb24gKDEpLnRhYpSMBnBy
+ZWZpeJROjAdyZWxwYXRolE6MBXRpdGxllIwSdmFsaWRhdGlvbiAoMSkudGFilIwFc2hlZXSUjACU
+jAtmaWxlX2Zvcm1hdJROdWJoBimBlH2UKGgJjCkvVXNlcnMvY2hvaWh5ZWppbi9Eb3dubG9hZHMv
+dHJhaW4gKDEpLnRhYpRoC05oDE5oDYwNdHJhaW4gKDEpLnRhYpRoD2gQaBFOdWJoBimBlH2UKGgJ
+jD8vVXNlcnMvY2hvaWh5ZWppbi9BSS1FRFUvbW9kZWwtYnJpZGdlL29yYW5nZS13b3JrZmxvdy90
+cmFpbi50YWKUaAuMB2Jhc2VkaXKUaAyMCXRyYWluLnRhYpRoDYwJdHJhaW4udGFilGgPaBBoEU51
+YmWMC3JlY2VudF91cmxzlF2UjBNzYXZlZFdpZGdldEdlb21ldHJ5lE6MC3NoZWV0X25hbWVzlH2U
+jAZzb3VyY2WUSwCMA3VybJRoEIwNZG9tYWluX2VkaXRvcpR9lIwLX192ZXJzaW9uX1+USwGMEGNv
+bnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9
+lCiMBnZhbHVlc5R9lCiMCXZhcmlhYmxlc5RdlGgjfZRoL12UKF2UKIwNZWdvX3NwZWVkX2ttaJSM
+FE9yYW5nZS5kYXRhLnZhcmlhYmxllIwSQ29udGludW91c1ZhcmlhYmxllJOUSwBoEIhlXZQojAVn
+YXBfbZRoN0sAaBCIZV2UKIwObGVhZF9zcGVlZF9rbWiUaDdLAGgQiGVdlCiMBHJvYWSUaDWMEERp
+c2NyZXRlVmFyaWFibGWUk5RLAIwIZHJ5LCB3ZXSUiWVdlCiMEGFjdHVhbF9kZWx0YV9rbWiUaDdL
+AWgQiGVdlCiMBnJ1bl9pZJRoNYwOU3RyaW5nVmFyaWFibGWUk5RLAmgQiWVdlCiMA3Rfc5RoN0sC
+aBCIZV2UKIwGc291cmNllGhGSwJoEIllZXNoJUsBdYwKYXR0cmlidXRlc5QojA1lZ29fc3BlZWRf
+a21olEsChpSMBWdhcF9tlEsChpSMDmxlYWRfc3BlZWRfa21olEsChpSMBHJvYWSUXZQojANkcnmU
+jAN3ZXSUZYaUdJSMBW1ldGFzlIwGcnVuX2lklEsDhpSMA3Rfc5RLAoaUjAZzb3VyY2WUSwOGlIeU
+jApjbGFzc192YXJzlIwQYWN0dWFsX2RlbHRhX2ttaJRLAoaUhZSMEm1vZGlmaWVkX3ZhcmlhYmxl
+c5RdlHViYXUu
+</properties>
+		<properties node_id="5" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 1, 'savedWidgetGeometry': None, 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}, {'name': 'model.json 저장', 'script': '# AI EDU 시뮬레이터용 모델 저장 (Orange Python Script 위젯에 붙여 넣기)\n#\n# 연결: File(train.tab) → Tree → Python Script\n#   Tree의 Model 출력을 Python Script의 Classifier 입력에 연결한 뒤 Run을 누른다.\n#   저장 창에서 위치를 고르면 3차시에 불러올 model.json이 만들어진다.\n# 지원: Orange 기본 Tree 위젯의 회귀 트리, 입력 4개(속도·거리·앞차 속도·노면), 목표 actual_delta_kmh.\n# 모델 파일(.pkcls)을 직접 읽지 않으므로 pickle을 열지 않는다.\nimport json\nimport math\nfrom pathlib import Path\n\nimport Orange\nfrom Orange.tree import TreeModel, Node, NumericNode, DiscreteNode\n\nFEATURES = [\'ego_speed_kmh\', \'gap_m\', \'lead_speed_kmh\', \'road\']\n\n\ndef export_tree(model):\n    if model is None:\n        raise ValueError(\'Tree 위젯의 Model 출력을 이 위젯의 Classifier 입력에 연결하세요.\')\n    if type(model) is not TreeModel:\n        raise ValueError(\'Orange 기본 Tree 위젯의 모델만 저장할 수 있습니다. 지금 연결된 모델: \' + type(model).__name__)\n    if not model.domain.class_var or not model.domain.class_var.is_continuous:\n        raise ValueError(\'목표값이 숫자인 회귀 트리여야 합니다. File에서 시뮬레이터가 저장한 .tab 파일을 여세요.\')\n    if model.domain.class_var.name != \'actual_delta_kmh\':\n        raise ValueError(\'목표값은 actual_delta_kmh여야 합니다. 지금 목표값: \' + model.domain.class_var.name)\n    attrs = model.domain.attributes\n    if [a.name for a in attrs] != FEATURES:\n        raise ValueError(\'입력은 \' + \', \'.join(FEATURES) + \' 네 개여야 합니다. 지금 입력: \'\n                         + \', \'.join(a.name for a in attrs) + \' (File 위젯의 열 역할을 바꾸지 마세요.)\')\n    if any(a.compute_value is not None for a in attrs):\n        raise ValueError(\'Preprocess 등으로 바뀐 입력은 지원하지 않습니다. File → Tree로 바로 연결하세요.\')\n    if not all(a.is_continuous for a in attrs[:3]):\n        raise ValueError(\'속도·거리·앞차 속도는 숫자 열이어야 합니다.\')\n    if not attrs[3].is_discrete or set(attrs[3].values) != {\'dry\', \'wet\'}:\n        raise ValueError(\'road는 dry, wet 두 범주여야 합니다.\')\n\n    def encode(n):\n        if n is None:\n            return None\n        val = float(n.value[0])\n        if not math.isfinite(val):\n            raise ValueError(\'예측값에 숫자가 아닌 값이 있습니다.\')\n        out = {\'value\': val}\n        if type(n) is Node:\n            out[\'kind\'] = \'leaf\'\n        elif type(n) is NumericNode:\n            if not math.isfinite(n.threshold):\n                raise ValueError(\'분기 기준값에 숫자가 아닌 값이 있습니다.\')\n            out.update(kind=\'numeric\', feature=attrs[n.attr_idx].name,\n                       threshold=float(n.threshold), children=[encode(c) for c in n.children])\n        elif type(n) is DiscreteNode:\n            out.update(kind=\'categorical\', feature=attrs[n.attr_idx].name,\n                       categories=list(n.attr.values), children=[encode(c) for c in n.children])\n        else:\n            raise ValueError(\'지원하지 않는 트리 분기 형식입니다: \' + type(n).__name__)\n        return out\n\n    return {\'schema_version\': 1, \'model_type\': \'orange-native-regression-tree\',\n            \'orange_version\': Orange.__version__, \'features\': FEATURES,\n            \'target\': \'actual_delta_kmh\', \'units\': \'km/h\',\n            \'missing_policy\': \'reject\', \'tree\': encode(model.root)}\n\n\ndef choose_path():\n    default = Path.home() / \'model.json\'\n    try:\n        from AnyQt.QtWidgets import QApplication, QFileDialog\n        if QApplication.instance() is not None:\n            # Orange 안에 그리는 저장 창: macOS·Windows에서 같은 모양이고, 별도 시스템 창 뒤에 숨지 않는다.\n            name, _ = QFileDialog.getSaveFileName(None, \'3차시용 모델 저장\', str(default), \'JSON (*.json)\',\n                                                  options=QFileDialog.Option.DontUseNativeDialog)\n            return Path(name) if name else None\n    except ImportError:\n        pass\n    return default\n\n\ndef write_model(portable, path, out=None):\n    if path.suffix.lower() != \'.json\':\n        path = path.with_suffix(\'.json\')\n    text = json.dumps(portable, ensure_ascii=False, indent=2)\n    if len(text.encode(\'utf-8\')) &gt; 2_000_000:\n        raise ValueError(\'모델이 2MB를 넘어 시뮬레이터가 읽지 못합니다. Tree의 최대 깊이를 줄여 다시 학습하세요.\')\n    path.write_text(text, encoding=\'utf-8\')\n    print(\'저장 완료:\', path, file=out)\n    print(\'3차시 시뮬레이터의 주행 설정 → "변환된 모델 JSON"에서 이 파일을 고르세요.\', file=out)\n    return path\n\n\ndef save_model(model):\n    portable = export_tree(model)\n    path = choose_path()\n    if path is None:\n        print(\'저장을 취소했습니다.\')\n        return None\n    return write_model(portable, path)\n\n\n# Orange 안에서는 저장 창을 띄워 두기만 하고 바로 돌아온다(open). 창이 닫힐 때까지 기다리는\n# 방식(getSaveFileName)은 위젯이 신호를 처리하는 도중에 창을 띄우게 되어, macOS Orange 3.40에서\n# 저장 창을 닫는 순간 Orange 전체가 꺼졌다.\nSAVE_DIALOGS = globals().setdefault(\'SAVE_DIALOGS\', [])\n\n\ndef ask_and_save(model):\n    import sys\n    from AnyQt.QtWidgets import QFileDialog\n    out = sys.stdout  # 위젯 콘솔: 창이 닫힌 뒤의 안내도 여기에 쓴다\n    portable = export_tree(model)\n    for old in SAVE_DIALOGS:\n        old.close()\n    SAVE_DIALOGS.clear()\n    dlg = QFileDialog(None, \'3차시용 모델 저장\', str(Path.home()), \'JSON (*.json)\')\n    dlg.setOption(QFileDialog.Option.DontUseNativeDialog, True)\n    dlg.setAcceptMode(QFileDialog.AcceptMode.AcceptSave)\n    dlg.selectFile(\'model.json\')\n\n    def chosen(name):\n        try:\n            write_model(portable, Path(name), out)\n        except (OSError, ValueError) as err:\n            print(\'저장하지 못했습니다:\', err, file=out)\n\n    dlg.fileSelected.connect(chosen)\n    dlg.rejected.connect(lambda: print(\'저장을 취소했습니다. 다시 저장하려면 Run을 누르세요.\', file=out))\n    SAVE_DIALOGS.append(dlg)  # 창이 열려 있는 동안 지워지지 않게 붙잡아 둔다\n    dlg.open()\n    dlg.raise_()\n    dlg.activateWindow()\n\n\ndef run(model):\n    if model is None:\n        print(\'Tree의 Model 출력을 이 위젯에 연결하세요.\')\n        return\n    try:\n        from AnyQt.QtWidgets import QApplication\n        in_orange = QApplication.instance() is not None\n    except ImportError:\n        in_orange = False\n    try:\n        if in_orange:\n            ask_and_save(model)\n        else:\n            save_model(model)\n    except ValueError as err:\n        print(\'저장하지 못했습니다:\', err)\n\n\nrun(in_classifier)  # noqa: F821 (Python Script 위젯이 넣어 주는 변수)\n', 'filename': None}], 'scriptText': '# AI EDU 시뮬레이터용 모델 저장 (Orange Python Script 위젯에 붙여 넣기)\n#\n# 연결: File(train.tab) → Tree → Python Script\n#   Tree의 Model 출력을 Python Script의 Classifier 입력에 연결한 뒤 Run을 누른다.\n#   저장 창에서 위치를 고르면 3차시에 불러올 model.json이 만들어진다.\n# 지원: Orange 기본 Tree 위젯의 회귀 트리, 입력 4개(속도·거리·앞차 속도·노면), 목표 actual_delta_kmh.\n# 모델 파일(.pkcls)을 직접 읽지 않으므로 pickle을 열지 않는다.\nimport json\nimport math\nfrom pathlib import Path\n\nimport Orange\nfrom Orange.tree import TreeModel, Node, NumericNode, DiscreteNode\n\nFEATURES = [\'ego_speed_kmh\', \'gap_m\', \'lead_speed_kmh\', \'road\']\n\n\ndef export_tree(model):\n    if model is None:\n        raise ValueError(\'Tree 위젯의 Model 출력을 이 위젯의 Classifier 입력에 연결하세요.\')\n    if type(model) is not TreeModel:\n        raise ValueError(\'Orange 기본 Tree 위젯의 모델만 저장할 수 있습니다. 지금 연결된 모델: \' + type(model).__name__)\n    if not model.domain.class_var or not model.domain.class_var.is_continuous:\n        raise ValueError(\'목표값이 숫자인 회귀 트리여야 합니다. File에서 시뮬레이터가 저장한 .tab 파일을 여세요.\')\n    if model.domain.class_var.name != \'actual_delta_kmh\':\n        raise ValueError(\'목표값은 actual_delta_kmh여야 합니다. 지금 목표값: \' + model.domain.class_var.name)\n    attrs = model.domain.attributes\n    if [a.name for a in attrs] != FEATURES:\n        raise ValueError(\'입력은 \' + \', \'.join(FEATURES) + \' 네 개여야 합니다. 지금 입력: \'\n                         + \', \'.join(a.name for a in attrs) + \' (File 위젯의 열 역할을 바꾸지 마세요.)\')\n    if any(a.compute_value is not None for a in attrs):\n        raise ValueError(\'Preprocess 등으로 바뀐 입력은 지원하지 않습니다. File → Tree로 바로 연결하세요.\')\n    if not all(a.is_continuous for a in attrs[:3]):\n        raise ValueError(\'속도·거리·앞차 속도는 숫자 열이어야 합니다.\')\n    if not attrs[3].is_discrete or set(attrs[3].values) != {\'dry\', \'wet\'}:\n        raise ValueError(\'road는 dry, wet 두 범주여야 합니다.\')\n\n    def encode(n):\n        if n is None:\n            return None\n        val = float(n.value[0])\n        if not math.isfinite(val):\n            raise ValueError(\'예측값에 숫자가 아닌 값이 있습니다.\')\n        out = {\'value\': val}\n        if type(n) is Node:\n            out[\'kind\'] = \'leaf\'\n        elif type(n) is NumericNode:\n            if not math.isfinite(n.threshold):\n                raise ValueError(\'분기 기준값에 숫자가 아닌 값이 있습니다.\')\n            out.update(kind=\'numeric\', feature=attrs[n.attr_idx].name,\n                       threshold=float(n.threshold), children=[encode(c) for c in n.children])\n        elif type(n) is DiscreteNode:\n            out.update(kind=\'categorical\', feature=attrs[n.attr_idx].name,\n                       categories=list(n.attr.values), children=[encode(c) for c in n.children])\n        else:\n            raise ValueError(\'지원하지 않는 트리 분기 형식입니다: \' + type(n).__name__)\n        return out\n\n    return {\'schema_version\': 1, \'model_type\': \'orange-native-regression-tree\',\n            \'orange_version\': Orange.__version__, \'features\': FEATURES,\n            \'target\': \'actual_delta_kmh\', \'units\': \'km/h\',\n            \'missing_policy\': \'reject\', \'tree\': encode(model.root)}\n\n\ndef choose_path():\n    default = Path.home() / \'model.json\'\n    try:\n        from AnyQt.QtWidgets import QApplication, QFileDialog\n        if QApplication.instance() is not None:\n            # Orange 안에 그리는 저장 창: macOS·Windows에서 같은 모양이고, 별도 시스템 창 뒤에 숨지 않는다.\n            name, _ = QFileDialog.getSaveFileName(None, \'3차시용 모델 저장\', str(default), \'JSON (*.json)\',\n                                                  options=QFileDialog.Option.DontUseNativeDialog)\n            return Path(name) if name else None\n    except ImportError:\n        pass\n    return default\n\n\ndef write_model(portable, path, out=None):\n    if path.suffix.lower() != \'.json\':\n        path = path.with_suffix(\'.json\')\n    text = json.dumps(portable, ensure_ascii=False, indent=2)\n    if len(text.encode(\'utf-8\')) &gt; 2_000_000:\n        raise ValueError(\'모델이 2MB를 넘어 시뮬레이터가 읽지 못합니다. Tree의 최대 깊이를 줄여 다시 학습하세요.\')\n    path.write_text(text, encoding=\'utf-8\')\n    print(\'저장 완료:\', path, file=out)\n    print(\'3차시 시뮬레이터의 주행 설정 → "변환된 모델 JSON"에서 이 파일을 고르세요.\', file=out)\n    return path\n\n\ndef save_model(model):\n    portable = export_tree(model)\n    path = choose_path()\n    if path is None:\n        print(\'저장을 취소했습니다.\')\n        return None\n    return write_model(portable, path)\n\n\n# Orange 안에서는 저장 창을 띄워 두기만 하고 바로 돌아온다(open). 창이 닫힐 때까지 기다리는\n# 방식(getSaveFileName)은 위젯이 신호를 처리하는 도중에 창을 띄우게 되어, macOS Orange 3.40에서\n# 저장 창을 닫는 순간 Orange 전체가 꺼졌다.\nSAVE_DIALOGS = globals().setdefault(\'SAVE_DIALOGS\', [])\n\n\ndef ask_and_save(model):\n    import sys\n    from AnyQt.QtWidgets import QFileDialog\n    out = sys.stdout  # 위젯 콘솔: 창이 닫힌 뒤의 안내도 여기에 쓴다\n    portable = export_tree(model)\n    for old in SAVE_DIALOGS:\n        old.close()\n    SAVE_DIALOGS.clear()\n    dlg = QFileDialog(None, \'3차시용 모델 저장\', str(Path.home()), \'JSON (*.json)\')\n    dlg.setOption(QFileDialog.Option.DontUseNativeDialog, True)\n    dlg.setAcceptMode(QFileDialog.AcceptMode.AcceptSave)\n    dlg.selectFile(\'model.json\')\n\n    def chosen(name):\n        try:\n            write_model(portable, Path(name), out)\n        except (OSError, ValueError) as err:\n            print(\'저장하지 못했습니다:\', err, file=out)\n\n    dlg.fileSelected.connect(chosen)\n    dlg.rejected.connect(lambda: print(\'저장을 취소했습니다. 다시 저장하려면 Run을 누르세요.\', file=out))\n    SAVE_DIALOGS.append(dlg)  # 창이 열려 있는 동안 지워지지 않게 붙잡아 둔다\n    dlg.open()\n    dlg.raise_()\n    dlg.activateWindow()\n\n\ndef run(model):\n    if model is None:\n        print(\'Tree의 Model 출력을 이 위젯에 연결하세요.\')\n        return\n    try:\n        from AnyQt.QtWidgets import QApplication\n        in_orange = QApplication.instance() is not None\n    except ImportError:\n        in_orange = False\n    try:\n        if in_orange:\n            ask_and_save(model)\n        else:\n            save_model(model)\n    except ValueError as err:\n        print(\'저장하지 못했습니다:\', err)\n\n\nrun(in_classifier)  # noqa: F821 (Python Script 위젯이 넣어 주는 변수)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xa8\x00\x00\x00f\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

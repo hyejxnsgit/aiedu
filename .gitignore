@@ -1,0 +1,10 @@
+node_modules/
+dist/
+__pycache__/
+.venv*/
+.DS_Store
+# 학생·교사 주행 기록과 결과 파일은 올리지 않는다
+simulator/results/
+model-bridge/results/
+*.hwp
+model.json

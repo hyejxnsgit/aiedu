@@ -1,0 +1,13 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>Orange 연결 검증</title>
+<style>body{font:20px system-ui;max-width:850px;margin:60px auto;padding:20px;background:#101b2b;color:#eef5ff}pre{white-space:pre-wrap;line-height:1.7}h1{color:#57dcc7}</style>
+<h1>Orange → 브라우저 예측 검증</h1><p>연결 실험용 진단 화면입니다. 수업 프로그램은 아직 아닙니다.</p><pre id="result">검증 중…</pre>
+<script type="module">
+import {validateModel,predict} from './predict.mjs';
+try {
+ const model=validateModel(await (await fetch('./results/model.json')).json());
+ const f=await (await fetch('./results/cases.json')).json();
+ const maxError=Math.max(...f.cases.map((r,i)=>Math.abs(predict(model,r)-f.expected[i])));
+ if(maxError>1e-6)throw Error('예측 불일치');
+ document.querySelector('#result').textContent=JSON.stringify({status:'passed',cases:f.cases.length,boundary_cases:f.boundary_cases,max_absolute_error_kmh:maxError,orange_version:model.orange_version,notice:'가상 시험 데이터입니다. 실제 주행·안전성은 검증하지 않았습니다.'},null,2);
+}catch(e){document.querySelector('#result').textContent='FAILED: '+e.message;}
+</script></html>
